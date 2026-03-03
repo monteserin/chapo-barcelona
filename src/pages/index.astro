@@ -7,7 +7,12 @@ import Layout from "../layouts/Layout.astro";
     <!-- Hero Section -->
     <section class="hero">
       <div class="hero-content">
-        <h1>CHAPO Barcelona</h1>
+        <img
+          src="/logo-transparente.png"
+          alt="Macaco Barcelona Logo"
+          class="logo"
+        />
+        <h1>Macaco Barcelona</h1>
         <p>Confianza, Calidad y Profesionalismo en cada proyecto</p>
         <div class="hero-buttons">
           <a href="#servicios" class="btn btn-primary">Ver Servicios</a>
@@ -282,8 +287,8 @@ import Layout from "../layouts/Layout.astro";
 
   <style>
     :root {
-      --primary: #2563eb;
-      --secondary: #1e40af;
+      --primary: #fb9c0d;
+      --secondary: #e87f0c;
       --accent: #f59e0b;
       --dark: #1f2937;
       --light: #f9fafb;
@@ -312,6 +317,36 @@ import Layout from "../layouts/Layout.astro";
       padding: 0 20px;
     }
 
+    /* Header */
+    .header {
+      background: linear-gradient(
+        135deg,
+        var(--primary) 0%,
+        var(--secondary) 100%
+      );
+      padding: 15px 20px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .header-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo {
+      height: 250px;
+      width: auto;
+      object-fit: contain;
+      display: block;
+      margin: auto;
+    }
+
     /* Hero Section */
     .hero {
       background: linear-gradient(
@@ -331,8 +366,10 @@ import Layout from "../layouts/Layout.astro";
     .hero-content h1 {
       font-size: 3.5rem;
       margin-bottom: 20px;
-      font-weight: 800;
+      font-weight: 700;
       text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+      font-family: "Fredoka", sans-serif;
+      letter-spacing: 1px;
     }
 
     .hero-content p {
@@ -671,6 +708,10 @@ import Layout from "../layouts/Layout.astro";
 
     /* Media Queries */
     @media (max-width: 768px) {
+      .logo {
+        height: 50px;
+      }
+
       .hero-content h1 {
         font-size: 2.5rem;
       }
